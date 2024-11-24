@@ -1,0 +1,67 @@
+/* Estilo global */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('images/sakura-background.jpg') no-repeat center center fixed;
+    background-size: cover; /* Fondo proporcional */
+    color: #fff;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+/* Botones de personajes */
+.characters {
+    margin-top: 50px;
+}
+
+.btn {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tanjiro { background-color: #1abc9c; }
+.nezuko { background-color: #e74c3c; }
+.zenitsu { background-color: #f1c40f; }
+.inosuke { background-color: #3498db; }
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Iconos animados (más pequeños) */
+.icon {
+    position: absolute;
+    width: 5vw; /* Las imágenes ocuparán el 10% del ancho de la ventana */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
